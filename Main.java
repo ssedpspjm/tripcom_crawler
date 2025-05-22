@@ -19,7 +19,7 @@ public class Main {
                     System.out.println("Exiting...");
                     return;                          // main 메서드 종료
                 }
-                default -> System.out.println("❌ 잘못된 입력입니다. 다시 시도하세요."); // 잘못된 명령어 처리
+                default -> System.out.println(" 잘못된 입력입니다. 다시 시도하세요."); // 잘못된 명령어 처리
             }
         }
     }
@@ -47,7 +47,7 @@ public class Main {
             }
 
         } catch (SQLException e) { // SQL 관련 예외 처리
-            System.out.println("❌ 해당 목적지 테이블이 존재하지 않거나 조회 실패");
+            System.out.println(" 해당 목적지 테이블이 존재하지 않거나 조회 실패");
         } catch (Exception e) {    // 기타 예외 처리
             e.printStackTrace();   // 오류 상세 출력
         }
@@ -82,7 +82,7 @@ public class Main {
                 ps.setString(4, dep);     // 출발지 설정
                 ps.setString(5, arr);     // 도착지 설정
                 ps.executeUpdate();       // SQL 실행
-                System.out.println("✅ 항공편 추가 완료");
+                System.out.println(" 항공편 추가 완료");
             }
 
         } catch (Exception e) { // 예외 처리
